@@ -1,5 +1,5 @@
 var assert = require('assert');
-var subject = require('../app.js')
+var subject = require('../piano.js')
 
 describe('PianoPitch', function () {
 
