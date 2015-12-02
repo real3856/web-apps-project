@@ -1,0 +1,23 @@
+{
+  "name": "piano",
+  "description": "A Hello World app",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/icons/piano16x16.png",
+    "48": "/icons/piano48x48.png",
+    "60": "/icons/piano60x60.png",
+    "128": "/icons/piano128x128.png"
+  },
+  "developer": {
+    "name": "Your name",
+    "url": "http://example.com"
+  },
+  "permissions": {
+  "audio-channel-normal" : {
+    "description" : "Needed to play this app's audio content on the normal channel"
+  },
+  "audio-channel-content" : {
+    "description" : "Needed to play this app's audio content on the content channel"
+  }
+  }
+}

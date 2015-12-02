@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Hello World</title>
+
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+    <!-- This code is in the public domain. Enjoy! -->
+    <div style="color:#0000FF">
+        <p style="font-size:17px">Enjoy your music !</p>
+    </div>
+    <p>
+        <img id="myP" src="start.gif" width="480" height="160" alt="piano" usemap="#pianomap" />
+        <map name="pianomap">
+            <area shape="poly" coords="0,0,42,0,42,85,60,85,60,160,0,160"
+                  onclick="Piano.prototype.playSound('c.mp3')" onmousedown="mouseDown('C.gif')" onmouseup="mouseUp()" />
+            <area shape="rect" coords="42,0,75,85"
+                  onclick="Piano.prototype.playSound('chalf.mp3')" onmousedown="    mouseDown('Chalf.gif')" onmouseup="    mouseUp()" />
+            <area shape="poly" coords="75,0,104,0,104,85,120,85,120,160,60,160"
+                  onclick="Piano.prototype.playSound('d.mp3')" onmousedown="    mouseDown('D.gif')" onmouseup="    mouseUp()" />
+            <area shape="rect" coords="104,0,136,85"
+                  onclick="Piano.prototype.playSound('dhalf.mp3')" onmousedown="    mouseDown('Dhalf.gif')" onmouseup="    mouseUp()" />
+            <area shape="poly" coords="136,0,180,0,180,160,120,160,120,85,136,85"
+                  onclick="Piano.prototype.playSound('e.mp3')" onmousedown="    mouseDown('E.gif')" onmouseup="    mouseUp()" />
+            <area shape="poly" coords="180,0,222,0,222,85,240,85,240,160,180,160"
+                  onclick="Piano.prototype.playSound('f.mp3')" onmousedown="    mouseDown('F.gif')" onmouseup="    mouseUp()" />
+            <area shape="rect" coords="222,0,254,85"
+                  onclick="Piano.prototype.playSound('fhalf.mp3')" onmousedown="    mouseDown('Fhalf.gif')" onmouseup="    mouseUp()" />
+            <area shape="poly" coords="254,0,281,0,281,85,300,85,300,160,240,160"
+                  onclick="Piano.prototype.playSound('g.mp3')" onmousedown="    mouseDown('G.gif')" onmouseup="    mouseUp()" />
+            <area shape="rect" coords="281,0,315,85"
+                  onclick="Piano.prototype.playSound('ghalf.mp3')" onmousedown="    mouseDown('Ghalf.gif')" onmouseup="    mouseUp()" />
+            <area shape="poly" coords="315,0,340,0,340,85,360,85,360,160,300,160"
+                  onclick="Piano.prototype.playSound('a.mp3')" onmousedown="    mouseDown('A.gif')" onmouseup="    mouseUp()" />
+            <area shape="rect" coords="340,0,375,85"
+                  onclick="Piano.prototype.playSound('ahalf.mp3')" onmousedown="    mouseDown('Ahalf.gif')" onmouseup="    mouseUp()" />
+            <area shape="rect" coords="360,0,420,160"
+                  onclick="Piano.prototype.playSound('b.mp3')" onmousedown="    mouseDown('B.gif')" onmouseup="    mouseUp()" />
+            <area shape="rect" coords="420,0,480,160"
+                  onclick="Piano.prototype.playSound('high_c.mp3')" onmousedown="    mouseDown('highC.gif')" onmouseup="    mouseUp()" />
+        </map>
+    </p>
+    <button type="button" onclick="Piano.prototype.highPitch() , Piano.prototype.change()" style="width:100px;height:20px;font-size:15px;">high pitch</button>
+    <button type="button" onclick="Piano.prototype.normalPitch(), Piano.prototype.change()" style="width:100px;height:20px;font-size:15px;">normal </button>
+    <button type="button" onclick="Piano.prototype.lowPitch(), Piano.prototype.change()" style="width:100px;height:20px;font-size:15px;">low pitch</button>
+    <div style="color:#FF0000">
+        <p id="pitch" style="font-size:15px">normal pitch</p>
+    </div>
+</body>
+
+</html>
